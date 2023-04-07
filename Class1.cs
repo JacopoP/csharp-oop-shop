@@ -18,16 +18,16 @@ namespace csharp_oop_shop
         {
             var rand = new Random();
 
-            codice = rand.Next(1000, 9999);
+            codice = rand.Next(10000000, 99999999);
             this.nome = nome;
             this.descrizione = descrizione;
-            this.prezzo = prezzo;
+            this.prezzo = Math.Round(prezzo, 2);
             this.iva = iva;
         }
 
         public double taxedPrice()
         {
-            return prezzo * (100 + iva) / 100;
+            return Math.Round(prezzo * (100 + iva) / 100, 2);
         }
 
         public string fullName()
