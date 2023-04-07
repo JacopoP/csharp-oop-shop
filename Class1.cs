@@ -18,7 +18,7 @@ namespace csharp_oop_shop
         {
             var rand = new Random();
 
-            codice = rand.Next(10000000, 99999999);
+            codice = rand.Next(0, 99999999);
             this.nome = nome;
             this.descrizione = descrizione;
             this.prezzo = Math.Round(prezzo, 2);
@@ -32,7 +32,7 @@ namespace csharp_oop_shop
 
         public string fullName()
         {
-            return codice + " " + nome;
+            return padCodice() + " " + nome;
         }
 
         public void stampa()
@@ -41,6 +41,15 @@ namespace csharp_oop_shop
             Console.WriteLine(descrizione);
             Console.WriteLine("$" + taxedPrice());
             Console.WriteLine("Prezzo originale: $" + prezzo);
+        }
+
+        public string padCodice()
+        {
+            string stringCode = codice.ToString();
+            int zerosToAdd = 8 - stringCode.Length;
+            for (int i = 0; i < zerosToAdd; i++)
+                stringCode = "0" + stringCode;
+            return stringCode;
         }
     }
 }
