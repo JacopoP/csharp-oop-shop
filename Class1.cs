@@ -24,5 +24,15 @@ namespace csharp_oop_shop
             this.prezzo = prezzo;
             this.iva = iva;
         }
+
+        public double taxedPrice()
+        {
+            return prezzo * (100 + iva) / 100;
+        }
+
+        public string fullName()
+        {
+            return codice + " " + nome;
+        }
     }
 }
