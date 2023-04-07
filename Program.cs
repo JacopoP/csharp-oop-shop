@@ -24,6 +24,6 @@ prodotti[0].descrizione = "Disseta di più!";
 prodotti[0].prezzo = 15.99;
 prodotti[0].iva = 22;
 
-Console.WriteLine("\n Prodotto modificato:");
+Console.WriteLine("\nProdotto modificato:");
 prodotti[0].stampa();
 
