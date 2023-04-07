@@ -34,5 +34,13 @@ namespace csharp_oop_shop
         {
             return codice + " " + nome;
         }
+
+        public void stampa()
+        {
+            Console.WriteLine(fullName());
+            Console.WriteLine(descrizione);
+            Console.WriteLine("$" + taxedPrice());
+            Console.WriteLine("Prezzo originale: $" + prezzo);
+        }
     }
 }
